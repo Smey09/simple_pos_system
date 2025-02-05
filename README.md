@@ -10,6 +10,8 @@ This project contains a database schema for an e-commerce system. The schema inc
 - > get my pos-system-api.postman_collection.json for test api
 
 ## Database Tables
+<img width="1084" alt="Screenshot 2025-02-05 at 9 42 14 in the morning" src="https://github.com/user-attachments/assets/4d8dad90-ca60-49db-a260-6baf39e4421b" />
+
 1. Users
 Stores user information such as username, email, password, role, and created_at.
 -- CRUD Operations: Create, Read, Update, Delete.
