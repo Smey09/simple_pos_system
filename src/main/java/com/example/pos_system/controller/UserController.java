@@ -43,11 +43,15 @@ public class UserController {
 
     @GetMapping("/{user_id}")
     public ResponseEntity<Users> getUserById(@PathVariable String user_id) {
-        Optional<Users> userData = userService.getUserById(user_id);
-        if (userData.isPresent()) {
-            return new ResponseEntity<>(userData.get(), HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        try {
+            Optional<Users> userData = userService.getUserById(user_id);
+            if (userData.isPresent()) {
+                return new ResponseEntity<>(userData.get(), HttpStatus.OK);
+            } else {
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            }
+        } catch (Exception e){
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 

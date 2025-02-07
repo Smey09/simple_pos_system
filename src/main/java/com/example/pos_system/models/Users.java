@@ -4,9 +4,13 @@ import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 import com.example.pos_system.utils.CustomIdGenerator;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "users")
+@Getter
+@Setter
 public class Users {
 
     @Id

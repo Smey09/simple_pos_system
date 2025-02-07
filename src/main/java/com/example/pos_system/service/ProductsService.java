@@ -1,6 +1,7 @@
 package com.example.pos_system.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -51,4 +52,14 @@ public class ProductsService {
         });
     }
 
+//    public ProductResponseDTO updateProduct(String productId, ProductRequestDTO productRequestDTO) {
+//        return productRepository.findById(productId).map(products -> {
+//            products.setName(productRequestDTO.getName());
+//            products.setCategoryId(productRequestDTO.getProductId());
+//            return productRepository.save(products);
+//        }).orElseGet(()->{
+//            productRequestDTO.setProductId(productId);
+//            return productRepository.save(productRequestDTO);
+//        });
+//    }
 }

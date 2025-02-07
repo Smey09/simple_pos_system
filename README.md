@@ -47,6 +47,10 @@ Stores product categories.
 Special Note:
 Payments cannot be updated after creation.
 
+Swagger-ui
+```
+http://localhost:9999/swagger-ui/index.html
+```
 ```
 # API Port Configuration
 server.port=9999
@@ -64,6 +68,10 @@ spring.jpa.properties.hibernate.format_sql=true
 
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+
+# Spring Security default user credentials
+spring.security.user.name=admin
+spring.security.user.password=admin123
 ```
 
 
